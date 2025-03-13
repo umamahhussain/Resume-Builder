@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,4 +7,126 @@
     android:layout_height="match_parent"
     tools:context=".Home">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:contentDescription="bg" />
+
+    <!-- Semi-Transparent Overlay for Better Contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Profile Picture"
+            android:textSize="23dp"
+            android:fontFamily="@font/merriweather_light"
+            android:id="@+id/btn_profile"
+            android:backgroundTint="#13174B">
+        </Button>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Personal Details"
+            android:textSize="23dp"
+            android:id="@+id/btn_persDet"
+            android:fontFamily="@font/merriweather_light"
+            android:backgroundTint="#13174B">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:textColor="@color/white"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:text="Summary"
+            android:id="@+id/btn_summary"
+            android:textSize="23dp"
+            android:fontFamily="@font/merriweather_light"
+            android:backgroundTint="#13174B">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Education"
+            android:textSize="23dp"
+            android:id="@+id/btn_edu"
+            android:fontFamily="@font/merriweather_light"
+            android:backgroundTint="#13174B">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:id="@+id/btn_exp"
+            android:text="Experience"
+            android:textSize="23dp"
+            android:fontFamily="@font/merriweather_light"
+            android:backgroundTint="#13174B">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:id="@+id/btn_cert"
+            android:textColor="@color/white"
+            android:text="Certifications"
+            android:textSize="23dp"
+            android:fontFamily="@font/merriweather_light"
+            android:backgroundTint="#13174B">
+
+        </Button>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/btn_ref"
+            android:text="References"
+            android:textSize="23dp"
+            android:fontFamily="@font/merriweather_light"
+            android:backgroundTint="#13174B">
+
+        </Button>
+
+    </LinearLayout>
+
+</FrameLayout>
