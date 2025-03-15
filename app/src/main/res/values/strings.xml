@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Resume App</string>
+    <string-array name="degree_array">
+        <item>Masters</item>
+        <item>PhD</item>
+    </string-array>
+
+    <string-array name="grades_array">
+        <item>A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>C-</item>
+        <item>D+</item>
+    </string-array>
+
 </resources>

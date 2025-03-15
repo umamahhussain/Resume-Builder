@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer White Glow -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="18dp"/>
+            <stroke android:width="10dp" android:color="#80FFFFFF"/> <!-- White glow with transparency -->
+        </shape>
+    </item>
+
+    <!-- Middle Glow Layer (More Intense White) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="16dp"/>
+            <stroke android:width="6dp" android:color="#E0FFFFFF"/> <!-- Brighter white -->
+        </shape>
+    </item>
+
+    <!-- Inner Solid Blue Border -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="14dp"/>
+            <solid android:color="@color/white"/>  <!-- Keeps the input box background white -->
+            <stroke android:width="4dp" android:color="#002F7B"/> <!-- Deep blue border -->
+        </shape>
+    </item>
+
+</layer-list>

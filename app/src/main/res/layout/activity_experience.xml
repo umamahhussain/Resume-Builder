@@ -1,10 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:gravity="center"
     tools:context=".Experience">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:contentDescription="bg" />
+
+    <!-- Semi-Transparent Overlay for Better Contrast -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Experience"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:gravity="center" />
+
+            <!-- Experience 1 -->
+            <EditText
+                android:id="@+id/experience1_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Job Title"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/experience1_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/experience1_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration (e.g., Jan 2022 - Present)"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/experience1_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Job Description"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="textMultiLine"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="#898787"/>
+
+            <!-- Experience 2 -->
+            <EditText
+                android:id="@+id/experience2_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Job Title"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/experience2_company"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Company Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/experience2_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Duration (e.g., Mar 2020 - Dec 2021)"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/experience2_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Job Description"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="textMultiLine"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="#898787"/>
+
+            <!-- Buttons Layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_cancel"
+                    android:layout_marginEnd="10dp"
+                    android:paddingVertical="12dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@null"
+                    android:text="Submit"
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_submit"
+                    android:paddingVertical="12dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

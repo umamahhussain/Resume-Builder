@@ -1,10 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:gravity="center"
     tools:context=".ProfilePicture">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:contentDescription="bg" />
+
+    <!-- Semi-Transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:layout_marginTop="30dp"
+            android:text="Profile Picture"
+            android:fontFamily="@font/merriweather_light"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            android:gravity="center" />
+
+        <!-- Profile Picture Container -->
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- Profile Image -->
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/person"
+                android:background="@drawable/profile_border"
+                android:contentDescription="Profile Picture"/>
+
+            <!-- Edit Icon -->
+            <ImageButton
+                android:id="@+id/btn_edit_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:background="@null"
+                android:src="@drawable/edit"
+                android:contentDescription="Edit Picture"/>
+        </FrameLayout>
+
+        <!-- Buttons for Changing Profile Picture -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_select_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Select from Gallery"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_submit"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_capture_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Take a New Photo"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_submit"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_remove_pic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Remove Profile Picture"
+            android:textSize="18dp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_cancel"/>
+
+        <!-- Buttons Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:text="Cancel"
+                android:background="@drawable/btn_cancel"
+                android:textColor="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="10dp"
+                android:text="Save"
+                android:background="@drawable/btn_submit"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

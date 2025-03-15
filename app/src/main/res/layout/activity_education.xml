@@ -1,10 +1,273 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:gravity="center"
     tools:context=".Education">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Background Image -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg"
+        android:contentDescription="bg" />
+
+    <!-- Semi-Transparent Overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp"
+                android:text="Education"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/white"
+                android:textSize="35dp"
+                android:gravity="center" />
+
+            <!-- School -->
+            <EditText
+                android:id="@+id/school_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="School Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/school_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year of Completion"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="#898787"/>
+
+            <!-- College -->
+            <EditText
+                android:id="@+id/college_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="College Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <Spinner
+                android:id="@+id/college_grade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_border"
+                android:padding="15dp"
+                android:entries="@array/grades_array"/>
+
+            <EditText
+                android:id="@+id/college_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year of Completion"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="#898787"/>
+
+            <!-- University -->
+            <EditText
+                android:id="@+id/university_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="University Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/university_cgpa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CGPA"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="numberDecimal"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/university_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year of Completion"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="#898787"/>
+
+            <!-- Higher Education (Masters / PhD) -->
+            <Spinner
+                android:id="@+id/higher_degree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_border"
+                android:padding="15dp"
+                android:entries="@array/degree_array"/>
+
+            <EditText
+                android:id="@+id/higher_institute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Institution Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/higher_year"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year of Completion"
+                android:layout_marginBottom="25dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+
+            <!-- Higher Education (Masters / PhD) -->
+            <Spinner
+                android:id="@+id/higher_degree2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/edittext_border"
+                android:padding="15dp"
+                android:entries="@array/degree_array"/>
+
+            <EditText
+                android:id="@+id/higher_institute2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Institution Name"
+                android:layout_marginBottom="15dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="text"
+                android:textSize="20dp" />
+
+            <EditText
+                android:id="@+id/higher_year2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Year of Completion"
+                android:layout_marginBottom="25dp"
+                android:padding="20dp"
+                android:fontFamily="@font/merriweather_light"
+                android:textColor="@color/blue"
+                android:background="@drawable/edittext_border"
+                android:inputType="number"
+                android:textSize="20dp" />
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp">
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cancel"
+                    android:background="@drawable/btn_cancel"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Submit"
+                    android:background="@drawable/btn_submit"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>
