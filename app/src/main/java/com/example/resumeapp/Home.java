@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Home extends AppCompatActivity {
 
-    Button prof, exp, edu, cert, ref, sum, det;
+    Button prof, exp, edu, cert, ref, sum, det, gen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +37,7 @@ public class Home extends AppCompatActivity {
         exp.startAnimation(leftTOright);
         cert.startAnimation(rightTOleft);
         ref.startAnimation(leftTOright);
+        gen.startAnimation(rightTOleft);
 
         prof.setOnClickListener(v -> {
             Intent profile = new Intent(this, ProfilePicture.class);
@@ -66,10 +67,10 @@ public class Home extends AppCompatActivity {
             Intent references = new Intent(this, References.class);
             startActivity(references);
         });
-
-
-
-
+        gen.setOnClickListener(v -> {
+            Intent generate = new Intent(this, Resume.class);
+            startActivity(generate);
+        });
     }
 
     public void init()
@@ -81,5 +82,6 @@ public class Home extends AppCompatActivity {
         ref = findViewById( R.id.btn_ref );
         sum = findViewById( R.id.btn_summary );
         det = findViewById( R.id.btn_persDet );
+        gen = findViewById( R.id.btn_gen );
     }
 }

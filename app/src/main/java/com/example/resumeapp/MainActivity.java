@@ -39,9 +39,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Home.class);
             startActivity(intent);
             finish(); // Close the SplashActivity
-        }, 50); // 3 seconds delay
-
-
+        }, 3000); // 3 seconds delay
     }
 
     public void init(){

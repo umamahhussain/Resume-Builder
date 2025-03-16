@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:gravity="center"
+    tools:context=".Resume">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/person"
+            android:background="@drawable/circle"/>
+
+        <!-- Personal Details Section -->
+        <TextView android:text="Personal Details" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/SectionTitle"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/white"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp">
+            <ImageView android:src="@drawable/person" android:layout_width="20dp" android:layout_height="20dp"/>
+            <TextView android:id="@+id/name_text" android:layout_width="match_parent"
+                android:layout_height="wrap_content" style="@style/ResumeText"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/email" android:layout_width="20dp" android:layout_height="20dp"/>
+            <TextView android:id="@+id/email_text" android:layout_width="match_parent"
+                android:layout_height="wrap_content" style="@style/ResumeText"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/phone" android:layout_width="20dp" android:layout_height="20dp"/>
+            <TextView android:id="@+id/number_text" android:layout_width="match_parent"
+                android:layout_height="wrap_content" style="@style/ResumeText"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:src="@drawable/calendar" android:layout_width="20dp" android:layout_height="20dp"/>
+            <TextView android:id="@+id/dob_text" android:layout_width="match_parent"
+                android:layout_height="wrap_content" style="@style/ResumeText"/>
+        </LinearLayout>
+
+        <!-- Summary -->
+        <TextView android:text="Summary" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/SectionTitle"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/white"/>
+        <TextView android:id="@+id/summary_text" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/ResumeText"/>
+
+        <!-- Education -->
+        <TextView android:text="Education" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/SectionTitle"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/white"/>
+        <TextView android:id="@+id/education_text" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/ResumeText"/>
+
+        <!-- Experience -->
+        <TextView android:text="Experience" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/SectionTitle"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/white"/>
+        <TextView android:id="@+id/experience_text" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/ResumeText"/>
+
+        <!-- Certifications -->
+        <TextView android:text="Certifications" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/SectionTitle"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/white"/>
+        <TextView android:id="@+id/certifications_text" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/ResumeText"/>
+
+
+        <!-- References -->
+        <TextView android:text="References" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/SectionTitle"/>
+        <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/white"/>
+        <TextView android:id="@+id/references_text" android:layout_width="match_parent"
+            android:layout_height="wrap_content" style="@style/ResumeText"/>
+
+    </LinearLayout>
+</ScrollView>
+</FrameLayout>
